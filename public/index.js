@@ -18,9 +18,13 @@ socket.on('DANH_SACH_ONLINE', arrUserInfo => {
         const { ten, peerId } = user;
         $('#ulUser').append(`<li id="${peerId}">${ten}</li>`);
     });
+
+    socket.on('DA_CO_DISCONNECTED', peerId => {
+        $(`#${peerId}`).remove();
+    })
 });
 
-socket.on('DANG_KY_THAT_BAI', () => alert('Ten da ton tai vui long nhap ten khac'));
+socket.on('DANG_KY_THAT_BAI', () => alert('Vui lòng nhập tên hợp lệ ( hoặc tên đã tồn tại )'));
 
 
 peer.on('open', id => {
