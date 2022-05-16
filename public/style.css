@@ -1,0 +1,31 @@
+body{
+    justify-content: center;
+    background-color: azure;
+}
+
+.videoCall{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#localVideo{
+    width: 350px;
+    height: 320px;
+    border: 2px solid;
+}
+
+#remoteVideo{
+    width: 350px;
+    height: 320px;
+    border: 2px solid;
+}
+
+.joinRoom{
+    margin: 50px 25px 50px 25px;
+    text-align: center;
+}
+
+video{
+    width: 350px;
+    height: 260px;
+}

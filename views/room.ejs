@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Video</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io("http://localhost:5000");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.4.3/peerjs.min.cjs.map "></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="outsideRoom">
+        <div>
+            <h3 id="showPeerID">Your ID: </h3>
+            <h4>Online user:</h4>
+            <ul id="ulUser">
+
+            </ul>
+        </div>
+        <div class="videoCall">
+            <div id="localVideo">
+                <p>Local video</p>
+                <hr>
+            </div>
+            <div id="remoteVideo">
+                <p>Remote video</p>
+                <hr>
+            </div>
+        </div>  
+    </div>
+    <div class="joinRoom">
+        <div class="addName">
+            <input type="text" id="getName" placeholder="Enter your Name">
+            <button id="submitName">Set name</button>
+        </div>
+        <br>
+        <div id="afterJoin">
+            <input type="text" id="getPeerID" placeholder="Enter your ID">
+            <button id="joinCall">Join call</button>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
